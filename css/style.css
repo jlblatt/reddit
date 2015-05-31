@@ -1,0 +1,150 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/**********************************************************/
+
+body { }
+
+header { display: block; height: 89px; width: 100%;  overflow: hidden; 
+         border-bottom: 1px solid #aaaaaa;
+         -webkit-box-shadow: -3px 3px 3px #cccccc; -moz-box-shadow: -3px 3px 3px #cccccc; box-shadow: -3px 3px 3px #cccccc;
+         background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.5, rgb(212,231,249)), color-stop(1, rgb(181,199,217)) );
+         background-image: -moz-linear-gradient(center bottom, rgb(212,231,249) 50%, rgb(181,199,217) 100% ); }
+
+#header-content { height: 89px; width: 100%; background: url(../images/alien.png) top right no-repeat; }
+
+#subreddits { position: absolute; top: 66px; width: 100%; height: 21px;  overflow: hidden; white-space: nowrap;
+              background: #ffffff; background-color:rgba(255,255,255,0.5); border-top: 1px solid #b7c9dc; 
+              color: #888888; font-family: "Droid Sans", arial, sans-serif; font-size: 12px; text-shadow: 1px 1px 0px #ffffff; line-height: 22px; }
+#subreddits li { display: inline; margin: 0 0 0 18px; }
+#subreddits li a { color: #888888; text-decoration: none; cursor: pointer; }
+#subreddits li a:hover { color: #555555; text-decoration: underline; }
+#subreddits li.selected a { font-weight: bold; text-decoration: underline; color: #000000 !important; }
+#subreddits li.divide-left { padding-left: 18px; border-left: 1px dotted #888888; }
+
+#hide-subreddits { font-weight: bold; text-decoration: none; }
+#show-subreddits { float: left; width: 14px; margin: 40px 0 0 10px; cursor: pointer; color: #bbbbbb; font-size: 18px; }
+#show-subreddits:hover { color: #444444; }
+
+#logo { float: left; margin-right: 12px; padding-top: 20px; overflow: hidden; }
+#logo a { cursor: pointer; }
+
+#tabs { float: left; padding-top: 24px; font-family: "Droid Sans", arial, serif; font-size: 18px; text-shadow: 1px 1px 1px #ffffff; color: #666666; }
+#tabs li { display: inline; margin: 0 0 0 36px; }
+#tabs li a { color: #666666; text-decoration: none; cursor: pointer; }
+#tabs li.selected { font-size: 32px; }
+#tabs li.selected a { color: #222222 !important; }
+#tabs li a:hover { color: #000000; text-decoration: underline; }
+
+#query { float: right; width: 200px; margin: 20px 45px 0 0; padding: 4px; background: #ffffff url(../images/search.png) center right no-repeat; opacity: .60;
+         color: #333333; font-family: "Droid Sans", arial, serif;
+         -webkit-box-shadow: 2px 2px 2px #aaaaaa; -moz-box-shadow: 2px 2px 2px #aaaaaa; box-shadow: 2px 2px 2px #aaaaaa;
+         border: 1px solid #bbbbbb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+
+#main { float: left; width: 75%; padding: 18px 12px; 
+        font-family: "Droid Sans", arial, serif; font-size: 14px; }
+#side { margin-left: 76%; padding: 18px; 
+        font-family: "Droid Sans", arial, serif; font-size: 14px; }
+#loading { display: none; text-align: center; padding-top: 40px; }
+
+#items { }
+#items li { float: left; clear: left; padding: 8px 18px 16px 4px; margin-bottom: 3px;
+            border: 1px solid #ffffff; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+#items li:hover { } /*border: 1px solid #e8e8e8;
+                    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, rgb(248,248,248)), color-stop(1, rgb(242,242,242)));
+                    background-image: -moz-linear-gradient(center bottom, rgb(248,248,248) 50%, rgb(242,242,242) 100%);*/
+#items li a:hover { text-decoration: underline; }
+#items li.nohover:hover { background-image: none; border: 1px solid #ffffff; }
+#items .rank { float: left; width: 24px; text-align: right; color: #dddddd; font-weight: bold; padding: 5px 12px 0 0; }
+#items .score { float: left; width: 50px; text-align: center; color: #aaaaaa; font-weight: bold; padding: 5px 0 0 0; }
+#items .vote { display: none; position: absolute; padding: 15px 20px; margin-top:-8px; margin-left: 35px; }
+.upvote, .downvote { float: left; clear: left; width: 15px; height: 14px; background-image: url(../images/arrows_shadow.png); cursor: pointer; opacity: .8; }
+.upvote { background-position: 0 -28px; margin-bottom: 30px; }
+.upvote:hover { background-position: 0 0; }
+.downvote { background-position: 0 -42px; }
+.downvote:hover { background-position: 0 -14px; }
+.upvote-voted { background-position: 0 0; color: #ff7e3c !important; ;}
+.downvote-voted { background-position: 0 -14px; color: #8282ff !important; }
+#items .thumbnail { float: left; margin-right: 12px; }
+#items .title { margin-left: 100px; }
+#items .title a { color: #0000ff; line-height: 22px; font-size: 18px; text-decoration: none; text-shadow: 1px 1px 0px #e8e8e8; }
+#items .meta { margin-left: 115px; padding-top: 6px; font-size: 11px; color: #8f8f8f; line-height: 16px; font-family: arial, sans-serif; }
+#items .meta a { color: #829AB2; font-weight: bold; cursor: pointer; text-decoration: none; }
+#items .meta a:hover { color: #666666; text-decoration: underline; }
+#items .meta p { padding-bottom: 2px; }
+#items .indent-more { margin-left: 192px; }
+#items .empty { color: #bb0000; }
+
+#selftext, #comments { display: none; clear: left; font-size: 13px; line-height: 18px; color: #333333; font-family: verdana, sans-serif; }
+#selftext { max-width: 800px; margin: 6px 35px 36px 35px; padding: 15px 15px 12px 15px; border: 1px solid #eeeeee; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, rgb(248,248,248)), color-stop(1, rgb(242,242,242)));
+            background-image: -moz-linear-gradient(center bottom, rgb(248,248,248) 50%, rgb(242,242,242) 100%); }
+#comments { margin: 6px 15px 24px 15px; border-top: 1px dotted #bbbbbb; padding-top: 4px; }
+#selftext a, #comments a { color: #0000aa; }
+#selftext p, #comments p { margin-bottom: 6px; }
+#selftext pre, #comments pre { margin-bottom: 6px; padding-top: 4px; font-family: "Lucida Console", Monaco, "Courier New", monospace; font-size: 12px; padding-left: 20px; color: #666666; }
+#selftext blockquote, #comments blockquote { margin-bottom: 6px; border-left: 2px solid #336699; padding-left: 8px; color: #888888; }
+.comment { overflow: hidden; margin: 24px 0 0 0; }
+.comment .comment { padding: 3px 0 0 20px; border-left: 1px solid #eeeeee; }
+.comment-body { max-width: 800px; }
+.comment .meta { max-width: 800px; padding-bottom: 2px; 
+                 font-size: 11px; color: #999999; line-height: 16px; font-family: arial, sans-serif; }
+.comment .meta-top { border-bottom: 1px solid #eeeeee; }
+.comment .meta-btm { padding-top: 6px; }
+.comment .meta a { color: #6B839B !important; font-weight: bold; cursor: pointer; text-decoration: none; }
+.comment .meta a:hover { color: #666666 !important; text-decoration: underline; }
+.score { margin-right: 12px; color: #bbbbbb; line-height: 12px; text-align: right; 
+         font-size: 18px; font-family: "Droid Sans", arial, sans-serif; font-weight: bold; }
+.parent { }
+.permalink { }
+.minmax { font-size: 12px; font-weight: bold; margin-right: 4px; }
+
+#comments { display: none; }
+
+#pagination { clear: left; padding: 5px 20px 20px 20px; }
+#pagination a { text-decoration: none; }
+#pagination a:hover { text-decoration: underline; }
+
+#submit { display: none; padding: 12px; margin-bottom: 12px; color: #888888; background: #fafafa; line-height: 24px;
+         border: 1px solid #eeeeee; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+#link-fields { margin-bottom: 18px; }
+#link-fields label, #link-fields input { display: block; margin: 6px 0; width: 100%; }
+#link-fields textarea { width: 100%; height: 120px; }
+#link-submit-btn { float: right; padding: 5px 10px;  background: url(http://www.reddit.com/static/gradient-button.png) bottom left repeat-x;
+                   font-family: "Droid Sans", arial, sans-serif; font-size: 12px; color: #444444; text-decoration: none; cursor: pointer;
+                   border: 1px solid #b7c9dc; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+#link-submit-btn:hover { color: #ffffff; text-decoration: underline;  background: url(http://www.reddit.com/static/gradient-button-hover.png) bottom left repeat-x; }
+#submit-status { text-align: center; padding: 10px; }
+.submit-ok { color: #008800; }
+.submit-error { color: #880000; }
+#submit-loading { display: none; text-align: center; padding: 10px; }
+
+#submit-link { display: block; padding: 8px 16px; background: url(http://www.reddit.com/static/gradient-button.png) bottom left repeat-x;
+               text-align: right; font-size: 14px; color: #444444; text-decoration: none; cursor: pointer;
+               border: 1px solid #b7c9dc; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+#submit-link:hover { color: #ffffff; text-decoration: underline;  background: url(http://www.reddit.com/static/gradient-button-hover.png) bottom left repeat-x; }
+
+#login { padding: 10px 0; }
+#login input { opacity: .4; }
+
+#username, #password { float: left; width: 43%; margin: 0; padding: 4px; background: #ffffff;
+         color: #333333; font-family: "Droid Sans", arial, serif;
+         -webkit-box-shadow: 2px 2px 2px #aaaaaa; -moz-box-shadow: 2px 2px 2px #aaaaaa; box-shadow: 2px 2px 2px #aaaaaa;
+         border: 1px solid #bbbbbb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+#username { float: left; }
+#password { float: right; }
+#login-submit { display: none; }
+#login-loading { clear: right; display: none; text-align: center; padding: 10px; }
+#login-status { clear: right; text-align: center; padding: 10px; }
+.login-ok { color: #008800; }
+.login-incorrect { color: #880000; }
+
+#subreddit-logo { display: none;  margin-bottom: 10px; background: #CEE3F8; padding: 12px; text-align: center;
+                  border: 1px solid #bbbbbb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }

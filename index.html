@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>reddit!</title>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Molendo">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid Sans">
+		<link rel="stylesheet" href="css/style.css" media="screen" />
+		<script src="js/jquery-1.5.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/common.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div id="header-content">
+				<ul id="subreddits">
+					<li><a id="hide-subreddits" title="Hide Subreddits">&uArr;</a></li>
+					<li class="divide-left">&middot; <a href="/r/all">all</a></li>
+					<li>&middot; <a href="/r/random">random</a></li>
+					<li class="divide-left">&middot; <a href="/r/pics">pics</a></li>
+					<li>&middot; <a href="/r/reddit.com">reddit.com</a></li>
+					<li>&middot; <a href="/r/funny">funny</a></li>
+					<li>&middot; <a href="/r/politics">politics</a></li>
+					<li>&middot; <a href="/r/gaming">gaming</a></li>
+					<li>&middot; <a href="/r/AskReddit">AskReddit</a></li>
+					<li>&middot; <a href="/r/worldnews">worldnews</a></li>
+					<li>&middot; <a href="/r/videos">videos</a></li>
+					<li>&middot; <a href="/r/IAmA">IAmA</a></li>
+					<li>&middot; <a href="/r/todayilearned">todayilearned</a></li>
+					<li>&middot; <a href="/r/fffffffuuuuuuuuuuuu">fffffffuuuuuuuuuuuu</a></li>
+					<li>&middot; <a href="/r/WTF">WTF</a></li>
+					<li>&middot; <a href="/r/atheism">atheism</a></li>
+					<li>&middot; <a href="/r/trees">trees</a></li>
+					<li>&middot; <a href="/r/AdviceAnimals">AdviceAnimals</a></li>
+					<li>&middot; <a href="/r/programming">programming</a></li>
+					<li>&middot; <a href="/r/Music">Music</a></li>
+					<li>&middot; <a href="/r/technology">technology</a></li>
+					<li>&middot; <a href="/r/comics">comics</a></li>
+					<li>&middot; <a href="/r/science">science</a></li>
+					<li>&middot; <a href="/r/offbeat">offbeat</a></li>
+					<li>&middot; <a href="/r/starcraft">starcraft</a></li>
+					<li>&middot; <a href="/r/news">news</a></li>
+					<li>&middot; <a href="/r/Android">Android</a></li>
+					<li>&middot; <a href="/r/canada">canada</a></li>
+					<li>&middot; <a href="/r/aww">aww</a></li>
+					<li>&middot; <a href="/r/geek">geek</a></li>
+					<li>&middot; <a href="/r/Libertarian">Libertarian</a></li>
+					<li>&middot; <a href="/r/movies">movies</a></li>
+					<li>&middot; <a href="/r/entertainment">entertainment</a></li>
+					<li>&middot; <a href="/r/bestof">bestof</a></li>
+					<li>&middot; <a href="/r/Fitness">Fitness</a></li>
+					<li>&middot; <a href="/r/soccer">soccer</a></li>
+					<li>&middot; <a href="/r/food">food</a></li>
+					<li>&middot; <a href="/r/Economics">Economics</a></li>
+					<li>&middot; <a href="/r/sex">sex</a></li>
+					<li>&middot; <a href="/r/sports">sports</a></li>
+					<li>&middot; <a href="/r/environment">environment</a></li>
+				</ul>
+
+				<a id="show-subreddits" title="Show Subreddits">&nbsp;</a>
+
+				<div id="logo"><a href ="/"><img src="images/logo.png" /></a></div>
+
+				<ul id="tabs">
+					<li class="selected">&raquo; <a>hot</a></li>
+					<li>&raquo; <a>new</a></li>
+					<li>&raquo; <a>controversial</a></li>
+					<li>&raquo; <a>top</a></li>
+					<li>&raquo; <a>saved</a></li>
+				</ul>
+
+				<form id="search">
+					<input type="text" id="query" name="query" value="search" />
+				</form>
+			</div>
+		</header>
+
+		<div id="main">
+			<div id="loading"><img src="images/loading.gif" /></div>
+			<ol id="items"></ol>
+			<div id="selftext"></div>
+			<div id="comments"></div>
+			<div id="pagination"></div>
+		</div>	
+
+		<div id="side">
+			<div id="subreddit-logo"></div>
+			<form id="submit">
+				<div id="link-fields">
+					<label for="link-url">URL</label><input type="text" id="link-url" />
+					<label for="link-title">Title</label><input type="text" id="link-title" />
+					<label for="link-sr">Subreddit</label><input type="text" id="link-sr" />
+				</div>
+				<input type="radio" id="link-link" name="kind" value="link" checked /><label for="link-link">link</label>
+				<input type="radio" id="link-self" name="kind" value="self" /><label for="link-self">self</label>
+				<input type="submit" id="link-submit-btn" value="Submit" />
+				<div id="submit-loading"><img src="images/loading-sm-grey.gif" /></div>
+				<div id="submit-status"></div>
+			</form>
+			<a id="submit-link" />Submit a Link &raquo;</a>
+			<form id="login" action="http://www.reddit.com/api/login" method="post">
+				<input type="text" id="username" name="username" value="username" />
+				<input type="password" id="password" name="password" value="password" />
+				<div id="login-loading"><img src="images/loading-sm.gif" /></div>
+				<div id="login-status"></div>
+			</form>
+		</div>
+	</body>
+
+</html>
+
+
+	<!-- 
+	     version: .u
+
+	     props:
+	      -http://preloaders.net/ for the nifty loading animation
+	      -Micah Burke for magnifying glass graphic (http://www.sxc.hu/photo/1282502)
+	      -8tracks (http://8tracks.com/) for enough non-repetitive music for this coding bender
+	      -reddit (duh) for the API, wiki, and some graphics
+
+	     tools used:
+	      -puTTY, emacs, Photoshop, Firefox + Firebug, JSONLint
+
+	     RIP Jolt, 1985 - 2005
+	-->
